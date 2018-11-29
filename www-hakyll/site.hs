@@ -3,6 +3,13 @@
 import Data.Monoid (mappend)
 import Hakyll
 
+static :: Pattern -> Rules ()
+static f = match f $ do
+    route idRoute
+    compile copyFileCompiler
+
+directory :: (Pattern -> Rules a) -> String -> Rules a
+directory act f = act $ fromGlob $ f ++ "/**"
 config :: Configuration
 config =
     defaultConfiguration
@@ -11,6 +18,8 @@ config =
 
 main :: IO ()
 main = hakyllWith config $ do
+    -- SEE: http://vapaus.org/text/hakyll-configuration.html
+    mapM_ (directory static) ["css", "font", "js", "images"]
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler

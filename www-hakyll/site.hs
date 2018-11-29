@@ -1,12 +1,16 @@
---------------------------------------------------------------------------------
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid (mappend)
-import           Hakyll
 
+import Data.Monoid (mappend)
+import Hakyll
 
---------------------------------------------------------------------------------
+config :: Configuration
+config =
+    defaultConfiguration
+        { providerDirectory = "www-hakyll"
+        }
+
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith config $ do
     match "images/*" $ do
         route   idRoute
         compile copyFileCompiler

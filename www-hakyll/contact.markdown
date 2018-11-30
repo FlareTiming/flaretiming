@@ -2,5 +2,5 @@
 title: Contact
 ---
 
-I live in a small hut in the mountains of Kumano Kodō on Kii Hantō and would not
-like to be contacted.
+If you find errors in any of the results published here on **flaretiming.com**,
+please raise an [issue](https://github.com/BlockScope/flare-timing/issues).

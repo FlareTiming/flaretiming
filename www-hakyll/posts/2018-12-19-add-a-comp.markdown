@@ -1,0 +1,46 @@
+---
+title: Add a Comp
+---
+
+# TLDR;
+Prepared to help with finding and reporting bugs? If so then you may be ready
+to submit your comp's data and have it scored and published. The first thing to
+do is open an [add
+a comp](https://github.com/FlareTiming/comps/issues/new?template=add_comp.md)
+issue. You'll find further instructions there.
+
+## It's Complicated
+The backstory is that GAP is a set of rules, laid down by CIVL, that regulate
+how to score hang gliding and paragliding competitions. Nobody scores by hand
+but that is nearly the attention to detail needed to implement a program that
+does the scoring. This program will need to work with spherical and ellipsoidal
+Earth models, find where tracklogs, those windy and loopy trails, cross and
+re-cross the turnpoints cylinders of the day's flying task. The rules don't say
+anything about how patchy and spikey a tracklog can be and still be accepted.
+Does the tracklog start at yesterday's landing point?  Does't it end when the
+pilot switches off their vario doing 100km/h in the team car? I'll leave off
+enumerating a laundry list of difficulties. Suffice it to say implementing GAP
+is no easy task.
+
+I've had a go at implementing GAP in flare-timing and have asked [a few
+questions](https://github.com/BlockScope/CIVL-GAP/issues) about how to
+interpret the rules. I didn't want to look at how the official scoring program
+did it as that could be wrong, no disrespect intended for the voluntary
+development effort already put in to that program. The initial motivation I had
+for re-implementing GAP was to independently produce a set of working and
+result files that could be used to double-check the officially generated
+results and show a bit more working in the process.
+
+## What's in it for you?
+
+By submitting your comp you'll get to have it scored (and published too if you
+wish). All that you need provide is the comp's `*.fsdb` file along with
+tracklogs in `*.igc` or `*.kml` format. By finding problems and raising issues
+with the scoring, you'll be helping to make competitions fair and transparent
+and possibly we'll be able to find and clear up more ambiguities in the rules.
+
+## Thanks for Helping Out.
+I want to thank scorers that have already given me comp data and answered
+questions I had; Igor, Davis, Billo and Wesley. Jörg and Daniel, developers of
+FS, have helped fill in gaps in my understanding of the rules and have
+explained how FS goes about scoring.

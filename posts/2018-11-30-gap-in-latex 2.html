@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Flare Timing - Section 7a, the GAP Annex in LaTeX</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../">
+                        <span class="icon"><i class="fa fa-paper-plane-o"></i></span>
+                        <span class="has-text-weight-bold">Flare Timing</span>
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbar-burger" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../blog.html">Blog</a>
+                        <a class="navbar-item" href="../about.html">About</a>
+                        <a class="navbar-item" href="../contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="spacer"></div>
+            <div id="content" class="content">
+                <div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article class="tile is-child box">
+            <p class="title">Section 7a, the GAP Annex in LaTeX</p>
+            <p class="subtitle">November 30, 2018</p>
+            
+        </article>
+    </div>
+</div>
+<div class="content">
+    <article>
+        <p>I conducted an experiment to see if I can reproduce the CIVL GAP scoring docs, starting from LaTeX markup.</p>
+<p>Scoring is not simple. Hang-gliding and paragliding are scored similarly but there are quite a few differences. Over the years scoring has evolved and it is getting more complex. I’m not sure about this but I expect that only the latest rules are documented.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Clone the <a href="https://github.com/BlockScope/CIVL-GAP">CIVL-GAP repository</a>, open a shell and typeset <code>gap.tex</code> to produce <code>gap.pdf</code>.</p>
+<pre><code>&gt; git clone https://github.com/BlockScope/CIVL-GAP.git
+&gt; cd CIVL-GAP
+&gt; xelatex gap.tex
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex)
+...
+Output written on gap.pdf (48 pages).
+Transcript written on gap.log.</code></pre>
+<p>I edit the various <code>*.tex</code> document fragments in a plain text editor but there are tools such as <a href="https://en.wikipedia.org/wiki/TeXworks">TeXworks</a> that are purpose-built for editing LaTeX and for typsetting and previewing the resultant <code>*.pdf</code>. It runs on Windows, Linux and OSX and is free but requires a separate TeX installation. For this, I’ve used <a href="https://en.wikipedia.org/wiki/MiKTeX">MiKTeX</a> on Windows and <a href="https://en.wikipedia.org/wiki/MacTeX">MacTeX</a> on OSX. The editing experience is not <a href="https://en.wikipedia.org/wiki/WYSIWYG">WYSIWYG</a> with TeXworks, it has separate windows for editing the source file and for showing the preview.</p>
+<p>The whole document can be worked on at once by loading <code>gap.tex</code> into the editor but it is quicker to work on only a section at a time. Each section has its own <code>sec-*.tex</code> file, <code>sec-introduction.tex</code> for example. Each appendix is also self-contained in this way but named <code>apx-*.tex</code> such as <code>apx-gap-defaults.tex</code>. Individual sections can be typeset from the command line too.</p>
+<pre><code>&gt; xelatex sec-philosophy.tex
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex)
+...
+Output written on sec-philosophy.pdf (3 pages).
+Transcript written on sec-philosophy.log.</code></pre>
+<p>Other <code>*.tex</code> files contain the LaTeX source for diagrams and graphs.</p>
+<p>Note that typesetting the document as a whole must be made twice to create and then reference labels for sections, figures and tables. On the first pass these references will be rendered as <strong>??</strong>.</p>
+<h2 id="why-latex">Why LaTeX?</h2>
+<blockquote>
+<p>LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation.</p>
+<p>LaTeX is the de facto standard for the communication and publication of scientific documents. LaTeX is available as free software.</p>
+</blockquote>
+<p>SOURCE: <a href="https://www.latex-project.org/">LaTeX – A document preparation system</a> from the LaTeX project.</p>
+<p>LaTeX has markup for equations and charts. Its plain-text source works in well with source control and related tooling.</p>
+<blockquote>
+<p>LaTeX is not a word processor! Instead, LaTeX encourages authors not to worry too much about the appearance of their documents but to concentrate on getting the right content.</p>
+</blockquote>
+<p>SOURCE: <a href="https://www.latex-project.org/about/">An introduction to LaTeX</a> from the LaTeX project.</p>
+<p>There’s a <a href="https://tex.stackexchange.com/">TeX stack exchange</a> question and answer site. There are abundant learning resources and each package has its own documentation on CTAN, the Comprehensive TeX Archive. I used the <a href="https://ctan.org/pkg/pgfplots?lang=en">pgfplots</a> package for the plots. I found ShareLaTeX, now <a href="https://www.overleaf.com/learn">Overleaf</a> helpful.</p>
+<p>GAP scoring is well documented. Currently, the source format is *.docx and it is published as a single <code>*.pdf</code> file, <a href="https://www.fai.org/sites/default/files/civl/documents/sporting_code_s7a-xc-civl_gap_2018.pdf">Sporting Code Section 7A - Annex GAP - Edition 2018</a>, running to about fifty pages with very many equations and quite a few charts.</p>
+<h1 id="proposal-for-the-civl-plenary-meeting-2019">Proposal for the CIVL Plenary Meeting 2019</h1>
+<h2 id="the-problem">The Problem</h2>
+<blockquote>
+<p>A Proposal shall include:</p>
+<ul>
+<li>Your explanation of the problem and justification of the proposed solution,</li>
+<li>Quotation of the old wording from Section 7 (if any) with paragraph number.</li>
+<li>The new version of the wording to be put to Section 7 with the paragraph number.</li>
+</ul>
+</blockquote>
+<p>From the <a href="https://www.fai.org/news/civl-plenary-2019">instructions on preparing a proposal</a> for making a change to Section 7 of the FAI Sporting code.</p>
+<p>This is a process for formal submission and review of substantial changes to the sporting code (Section 7) or its GAP annex (Section 7a). I don’t have a problem with that but I see a process with more friction than the alternative I’m about to propose for making other kinds of change. Here I’m thinking of insubstantial changes such as fixing typos, improving grammar, correcting mistakes in formulae and drawing better diagrams and graphs.</p>
+<p>Having reimplemented GAP in <a href="https://github.com/BlockScope/flare-timing">flare-timing</a> and working almost exclusively from the GAP annex, I would like to see the explanation of how GAP works improved.</p>
+<p>Some of the documentation of how GAP works in the GAP annex (Section 7a) has surely been written about after being implemented in the scoring software and some of what is implemented has no documentation. There are places where readers are advised to consult the code and warned that the code differs from the rules or worse yet that we’re not sure what the code does exactly.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>By nature, the GAP annex is a technical document with many formulae and some diagrams and graphs. The solution I propose is to reuse what I have trialed in this repository for producing the GAP annex (Section 7a) PDF document and retire the existing <code>*.docx</code> source document. I would transfer ownership of this repository to the <a href="https://github.com/FAI-CIVL">FAI-CIVL</a> organization on github. This is how I propose the process of making changes to the GAP annex would then work:</p>
+<p>The repository remains public. Anyone finding a small problem such as a typo can raise an issue or make a pull request immediately with the correction. For more substantial changes raising an issue is still a good idea. It is even possible to provide templates for such issues, basically a checklist of things to do when lodging the issue. For these larger changes, the repository would need to be forked and we’d require the work to be done on a branch. The reason for branching is to fit in with the current formal proposal and review process. The changes can be seen by comparing branches, in this case between <strong>master</strong> and the branch with the proposed changes. If the proposal is accepted as-is then it can be merged when accepted. If it requires more work then these changes can be made on the branch. They get added to any existing pull request on that branch anyway.</p>
+<p>I’m a software developer and <a href="https://ghuser.io/philderbeast">contribute to many projects</a> hosted on github but these days many non-technical groups are using github for collaboration. There’s even a video tutorial series called <a href="https://www.youtube.com/watch?v=BCQHnlnPusY&amp;list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV">Git and GitHub for Poets</a>.</p>
+<p>GitHub really has a great web interface. A contributor finding an issue can reference and highlight a line number range in the source. Authors can work at the same time on different parts of the GAP annex without having conflicts and even if their contributions do overlap then there is merge tooling for resolving such conflicts. Version history, differences, tagged versions and published releases are also available.</p>
+<p>By holding off merging changes until they undergo formal review at a plenary we’d also be able to accommodate the current formal process with this solution.</p>
+    </article>
+</div>
+
+            </div>
+        </div>
+    </body>
+    <script language="javascript" src="../css/app.js" defer></script>
+</html>

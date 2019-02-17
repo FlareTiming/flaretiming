@@ -29,7 +29,8 @@
             </nav>
             <div class="spacer"></div>
             <div id="content" class="content">
-                <p>This website <strong>flaretiming.com</strong> is a place for publishing the results of scoring competitions with a suite of command line apps, collectively called flare-timing.</p>
+                <h3>About</h3>
+<p>This website <strong>flaretiming.com</strong> is a place for publishing the results of scoring competitions with a suite of command line apps, collectively called flare-timing.</p>
 <p><a href="http://fs.fai.org">FS</a> is the official software for scoring competitions. This involves collecting inputs, scoring and producing <code class="sourceCode">*.html</code> artefacts that can be pushed to a web server to publish the results. For recording inputs FS has forms for setting up the competition parameters and registering pilots. These are saved to the <code class="sourceCode">*.fsdb</code> file. When pilots download their track logs after a flight, FS copies these *.kml and <code class="sourceCode">*.igc</code> files to disk and saves the relative file location in the *.fsdb associating it with pilot and task. When FS does the scoring, the results are also written to the <code class="sourceCode">*.fsdb</code> file.</p>
 <p>The apps of <a href="https://github.com/BlockScope/flare-timing">flare-timing</a> when run in sequence are a reference implementation of GAP. Scoring starts with taking as inputs the <code class="sourceCode">*.fsdb</code>, <code class="sourceCode">*.kml</code> and <code class="sourceCode">*.igc</code> saved by FS.</p>
 <p>A competition is scored by running these apps in sequence:</p>
@@ -45,6 +46,7 @@
 <li>Score the competition with <a href="https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/gap-point">gap-point</a>.</li>
 </ol>
 <p>As well as producing the final scores for each pilot in a task, these apps also produce intermediate workings that can be checked by hand to ensure that the scoring is being done correctly, in accordance with the rules of GAP.</p>
+
             </div>
         </div>
     </body>

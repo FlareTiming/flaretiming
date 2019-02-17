@@ -32,6 +32,7 @@ main = hakyllWith config $ do
     match (fromList ["about.rst", "disclaim.rst", "contact.markdown"]) $ do
         route   $ setExtension "html"
         compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/title.html" defaultContext
             >>= loadAndApplyTemplate "templates/default.html" defaultContext
             >>= relativizeUrls
 
@@ -53,6 +54,7 @@ main = hakyllWith config $ do
 
             makeItem ""
                 >>= loadAndApplyTemplate "templates/blog.html" blogCtx
+                >>= loadAndApplyTemplate "templates/title.html" blogCtx
                 >>= loadAndApplyTemplate "templates/default.html" blogCtx
                 >>= relativizeUrls
 
@@ -60,11 +62,7 @@ main = hakyllWith config $ do
     match "index.html" $ do
         route idRoute
         compile $ do
-            posts <- recentFirst =<< loadAll "posts/*"
-            let indexCtx =
-                    listField "posts" postCtx (return posts) `mappend`
-                    constField "title" "Home" `mappend`
-                    defaultContext
+            let indexCtx = defaultContext
 
             getResourceBody
                 >>= applyAsTemplate indexCtx

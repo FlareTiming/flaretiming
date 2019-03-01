@@ -1,5 +1,5 @@
 ---
-title: Point Fractions fitting the Curve 
+title: Point Fractions Fitting the Curve 
 ---
 
 Equations for Points

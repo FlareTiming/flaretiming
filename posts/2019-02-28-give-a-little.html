@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Flare Timing - Give a Little, Zone Tolerances</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../">
+                        <span class="icon"><i class="fa fa-paper-plane-o"></i></span>
+                        <span class="has-text-weight-bold">Flare Timing</span>
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbar-burger" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../blog.html">Blog</a>
+                        <a class="navbar-item" href="../about.html">About</a>
+                        <a class="navbar-item" href="../contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="spacer"></div>
+            <div id="content" class="content">
+                <div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article class="tile is-child box">
+            <p class="title">Give a Little, Zone Tolerances</p>
+            <p class="subtitle">February 28, 2019</p>
+            
+        </article>
+    </div>
+</div>
+<div class="content">
+    <article>
+        <h1 id="the-problem">The Problem</h1>
+<p>Comp pilots fly with different makes and models of vario and can expect some error when the instrument makes its distinctive sound that the flight has flown into the turnpoint cylinder, tagging the zone. A glance at the screen can confirm this as it switches to display the distance and track to the next turnpoint.</p>
+<h1 id="a-workaround">A Workaround</h1>
+<p>To compensate the pilots for these inaccuracies, the GAP rules have some give around turnpoints. Instruments have improved over the years and the tolerance in the rules is being <a href="https://ozreport.com/1545743801">tightened up</a>. The tolerance was set at half a percent of the turnpoint radius but this is reducing to a tenth of a percent or 5m, whichever is the smaller.</p>
+<h1 id="added-options">Added Options</h1>
+<p>Aside from the tracklogs, the <code class="sourceCode">extract-input</code> command from flare-timing is able to extract all the inputs it needs from the competition <code class="sourceCode">*.fsdb</code> except for the Earth model used and the amount of tolerance allowed around control zones. These are supplied as command line options:</p>
+<pre class="sourceCode console"><code>&gt; extract-input --help
+...
+Give when crossing zones:
+    --give-fraction=NUM  How much give as a fraction, eg. 0.05% = 0.0005?
+    --give-distance=NUM  How much give in metres?
+Earth math:
+  -p --pythagorus         Pythagorus' method on a plane
+  -h --haversines         Haversines on a sphere
+  -v --vincenty           Vincenty's method on an ellipsoid</code></pre>
+<h1 id="borderline-border-and-line">Borderline, Border and Line</h1>
+<p>Some pilots are cutting it fine as can be seen in these screenshots following Tyler Borradaile around the course as he tags turnpoints <strong>BUMF</strong> and <strong>WELLIN</strong> with only one fix inside the radius with the added give and no fixes inside the turnpoint cylinder zone proper.</p>
+<div class="tile is-ancestor">
+  <div class="tile is-vertical is-6">
+    <div class="tile is-parent is-vertical">
+      <article class="tile is-child notification is-info">
+        <div class="content">
+          <p class="title">Task Map Zoomed to Extents</p>
+          <p>Not visible yet at this zoom, the solid fill shows the extent of
+          the zone proper while the border line traces the zone with added
+          give.
+          </p>
+          <figure class="image">
+            <img src="../images/forbes-2018-7-tyler.png">
+          </figure>
+        </div>
+      </article>
+      <article class="tile is-child notification is-warning">
+        <div class="content">
+          <p class="title">Zoomed in to Tag BUMF</p>
+          <p>This pilot is cutting it fine. They're tagging the cylinder
+          with added give.
+          </p>
+          <div class="content">
+            <figure class="image">
+              <img src="../images/forbes-2018-7-bumf.png">
+            </figure>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="tile is-parent is-vertical">
+    <article class="tile is-child notification is-success">
+      <div class="content">
+        <p class="title">Give before Zone</p>
+        <p>An exit cylinder has the give border line drawn inside of the
+        fill. A pilot flying to the edge of an exit cylinder leaves the
+        zone with added give before they leave the zone proper.
+        </p>
+        <figure class="image">
+          <img src="../images/forbes-2018-7-start.png">
+        </figure>
+      </div>
+    </article>
+    <article class="tile is-child notification is-danger">
+      <div class="content">
+        <p class="title">Zoomed in to Tag WELLIN</p>
+        <p>At this zoom level, we can see that the filled area is not flown
+        through but the border line around the turnpoint cylinder is.
+        </p>
+        <div class="content">
+          <figure class="image">
+            <img src="../images/forbes-2018-7-wellin.png">
+          </figure>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+    </article>
+</div>
+
+            </div>
+        </div>
+    </body>
+    <script language="javascript" src="../css/app.js" defer></script>
+</html>

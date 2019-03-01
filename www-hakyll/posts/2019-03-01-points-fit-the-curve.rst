@@ -4,12 +4,13 @@ title: Point Fractions fitting the Curve
 
 Equations for Points
 --------------------
-There are equations for how points are divided up and overlaying the
+Graphing the equations for how points are divided up and overlaying the
 fractional allocation of points is a good visual check that the
-implementation is lining up with expectations, lining up with the rules.
+implementation is lining up with expectations, lining up with the equations
+written into the GAP rules.
 
-I'm going to show you know how doing eyeballing these graphs helped me find
-some bugs I made transcribing these equations into code.
+Doing this helped me find some bugs I had made transcribing these equations
+into code.
 
 Reach a line
 ------------
@@ -20,7 +21,7 @@ Reach a line
     <div class="column is-one-third">
       <p>The equation for the allocation of points for reach, the linear
       distance flown irrespective of where the pilot lands or how difficult
-      the courseline is a simple ratio.
+      the courseline, is a simple ratio.
       </p>
       <p id="eqn-reach"></p>
       <p>When I was not including the pilots making it to the end of the

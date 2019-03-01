@@ -41,3 +41,29 @@ Reach a line
       </p>
     </div>
   </div>
+
+Time points
+-----------
+
+.. raw:: html
+
+  <div class="columns">
+    <div class="column is-one-third">
+      <p id="eqn-time"></p>
+      <p>I'd made an error in transcribing the above equation for allocating
+      the fraction of time points to each pilot.
+      </p>
+    </div>
+    <div class="column is-one-third">
+      <p class="subtitle">Broken</p>
+      <p class="image">
+        <img src="/images/2019-03-01/time-before.png">
+      </p>
+    </div>
+    <div class="column is-one-third">
+      <p class="subtitle">Fixed</p>
+      <p class="image">
+        <img src="/images/2019-03-01/time-after.png">
+      </p>
+    </div>
+  </div>

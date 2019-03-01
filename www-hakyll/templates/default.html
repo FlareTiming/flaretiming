@@ -45,6 +45,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             katex.render("y = x/x_{max}", document.getElementById("eqn-reach"), {throwOnError: false});
+            katex.render("max(0, 1 - \\sqrt[3]{(t - t_{best})^2/\\sqrt{t_{best}}})", document.getElementById("eqn-time"), {throwOnError: false});
         });
     </script>
 </html>

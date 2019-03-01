@@ -49,9 +49,9 @@ inside the turnpoint cylinder zone proper.
       <article class="tile is-child notification is-info">
         <div class="content">
           <p class="title">Task Map Zoomed to Extents</p>
-          <p>Not visible yet at this zoom, the solid fill shows the extent
-          of the zone proper while the border line as drawn has the
-          added give that the tolerance around an entry zone allows for.
+          <p>Not visible yet at this zoom, the solid fill shows the extent of
+          the zone proper while the border line traces the zone with added
+          give.
           </p>
           <figure class="image">
             <img src="/images/forbes-2018-7-tyler.png">
@@ -60,35 +60,6 @@ inside the turnpoint cylinder zone proper.
       </article>
       <article class="tile is-child notification is-warning">
         <div class="content">
-          <p class="title">Give before Zone</p>
-          <p>An exit cylinder has the give borderline drawn inside of the
-          fill. A pilot flying to the edge of an entry cylinder hits the zone
-          with added give before they hit the zone proper. The corollary for
-          an exit zone is similar, the pilot exits the zone with added give
-          before they exit the zone proper.
-          </p>
-          <figure class="image">
-            <img src="/images/forbes-2018-7-start.png">
-          </figure>
-        </div>
-      </article>
-    </div>
-    <div class="tile is-parent is-vertical">
-      <article class="tile is-child notification is-success">
-        <div class="content">
-          <p class="title">Zoomed in to Tag WELLIN</p>
-          <p>At this zoom level, we can see that filled area is not flown
-          through but the line around the turnpoint cylinder is.
-          </p>
-          <div class="content">
-            <figure class="image">
-              <img src="/images/forbes-2018-7-wellin.png">
-            </figure>
-          </div>
-        </div>
-      </article>
-      <article class="tile is-child notification is-danger">
-        <div class="content">
           <p class="title">Zoomed in to Tag BUMF</p>
           <p>Much the same thing happens at the next turnpoint. This pilot is
           cutting it fine. They're tagging the cylinder with added give.
@@ -96,6 +67,33 @@ inside the turnpoint cylinder zone proper.
           <div class="content">
             <figure class="image">
               <img src="/images/forbes-2018-7-bumf.png">
+            </figure>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="tile is-parent is-vertical">
+      <article class="tile is-child notification is-success">
+        <div class="content">
+          <p class="title">Give before Zone</p>
+          <p>An exit cylinder has the give borderline drawn inside of the
+          fill. A pilot flying to the edge of an exit cylinder leaves the zone
+          with added give before they leave the zone proper.
+          </p>
+          <figure class="image">
+            <img src="/images/forbes-2018-7-start.png">
+          </figure>
+        </div>
+      </article>
+      <article class="tile is-child notification is-danger">
+        <div class="content">
+          <p class="title">Zoomed in to Tag WELLIN</p>
+          <p>At this zoom level, we can see that the filled area is not flown
+          through but the line around the turnpoint cylinder is.
+          </p>
+          <div class="content">
+            <figure class="image">
+              <img src="/images/forbes-2018-7-wellin.png">
             </figure>
           </div>
         </div>

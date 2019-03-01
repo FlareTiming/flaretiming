@@ -57,7 +57,7 @@ inside the turnpoint cylinder zone proper.
             give.
             </p>
             <figure class="image">
-              <img src="/images/forbes-2018-7-tyler.png">
+              <img src="/images/2019-02-28/forbes-2018-7-tyler.png">
             </figure>
           </div>
         </article>
@@ -69,7 +69,7 @@ inside the turnpoint cylinder zone proper.
             </p>
             <div class="content">
               <figure class="image">
-                <img src="/images/forbes-2018-7-bumf.png">
+                <img src="/images/2019-02-28/forbes-2018-7-bumf.png">
               </figure>
             </div>
           </div>
@@ -85,7 +85,7 @@ inside the turnpoint cylinder zone proper.
           zone with added give before they leave the zone proper.
           </p>
           <figure class="image">
-            <img src="/images/forbes-2018-7-start.png">
+            <img src="/images/2019-02-28/forbes-2018-7-start.png">
           </figure>
         </div>
       </article>
@@ -97,7 +97,7 @@ inside the turnpoint cylinder zone proper.
           </p>
           <div class="content">
             <figure class="image">
-              <img src="/images/forbes-2018-7-wellin.png">
+              <img src="/images/2019-02-28/forbes-2018-7-wellin.png">
             </figure>
           </div>
         </div>
@@ -105,7 +105,4 @@ inside the turnpoint cylinder zone proper.
     </div>
   </div>
 
-.. _WELLIN: /images/forbes-2018-7-wellin.png
-.. _BUMF: /images/forbes-2018-7-bumf.png
-.. _TYLER: /images/forbes-2018-7-tyler.png
 .. _tightened up: https://ozreport.com/1545743801

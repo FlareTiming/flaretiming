@@ -46,31 +46,33 @@ inside the turnpoint cylinder zone proper.
 
   <div class="tile is-ancestor">
     <div class="tile is-vertical is-6">
-      <article class="tile is-child notification is-info">
-        <div class="content">
-          <p class="title">Task Map Zoomed to Extents</p>
-          <p>Not visible yet at this zoom, the solid fill shows the extent of
-          the zone proper while the border line traces the zone with added
-          give.
-          </p>
-          <figure class="image">
-            <img src="/images/forbes-2018-7-tyler.png">
-          </figure>
-        </div>
-      </article>
-      <article class="tile is-child notification is-warning">
-        <div class="content">
-          <p class="title">Zoomed in to Tag BUMF</p>
-          <p>Much the same thing happens at the next turnpoint. This pilot is
-          cutting it fine. They're tagging the cylinder with added give.
-          </p>
+      <div class="tile is-parent is-vertical">
+        <article class="tile is-child notification is-info">
           <div class="content">
+            <p class="title">Task Map Zoomed to Extents</p>
+            <p>Not visible yet at this zoom, the solid fill shows the extent of
+            the zone proper while the border line traces the zone with added
+            give.
+            </p>
             <figure class="image">
-              <img src="/images/forbes-2018-7-bumf.png">
+              <img src="/images/forbes-2018-7-tyler.png">
             </figure>
           </div>
-        </div>
-      </article>
+        </article>
+        <article class="tile is-child notification is-warning">
+          <div class="content">
+            <p class="title">Zoomed in to Tag BUMF</p>
+            <p>Much the same thing happens at the next turnpoint. This pilot is
+            cutting it fine. They're tagging the cylinder with added give.
+            </p>
+            <div class="content">
+              <figure class="image">
+                <img src="/images/forbes-2018-7-bumf.png">
+              </figure>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
     <div class="tile is-parent is-vertical">
       <article class="tile is-child notification is-success">

@@ -44,8 +44,9 @@
             defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            katex.render("y = x/x_{max}", document.getElementById("eqn-reach"), {throwOnError: false});
-            katex.render("max(0, 1 - \\sqrt[3]{(t - t_{best})^2/\\sqrt{t_{best}}})", document.getElementById("eqn-time"), {throwOnError: false});
+            katex.render("y = d/d_{max}", document.getElementById("eqn-reach"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(t - t_{best})^2/\\sqrt{t_{best}}})", document.getElementById("eqn-time"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(lc - lc_{min})^2/\\sqrt{lc_{min}}})", document.getElementById("eqn-leading"), {throwOnError: false});
         });
     </script>
 </html>

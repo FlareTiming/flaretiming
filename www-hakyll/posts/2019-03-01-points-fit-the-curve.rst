@@ -67,3 +67,28 @@ Time points
       </p>
     </div>
   </div>
+
+Leading points
+--------------
+
+.. raw:: html
+
+  <div class="columns">
+    <div class="column is-one-third">
+      <p id="eqn-leading"></p>
+      <p>I'd made an similar error with leading points.
+      </p>
+    </div>
+    <div class="column is-one-third">
+      <p class="subtitle">Broken</p>
+      <p class="image">
+        <img src="/images/2019-03-01/leading-before.png">
+      </p>
+    </div>
+    <div class="column is-one-third">
+      <p class="subtitle">Fixed</p>
+      <p class="image">
+        <img src="/images/2019-03-01/leading-after.png">
+      </p>
+    </div>
+  </div>

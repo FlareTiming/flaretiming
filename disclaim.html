@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Flare Timing - Disclaimer</title>
         <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous" />
     </head>
     <body>
         <div class="container">
@@ -36,4 +37,12 @@
         </div>
     </body>
     <script language="javascript" src="./css/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            katex.render("y = d/d_{max}", document.getElementById("eqn-reach"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(t - t_{best})^2/\\sqrt{t_{best}}})", document.getElementById("eqn-time"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(lc - lc_{min})^2/\\sqrt{lc_{min}}})", document.getElementById("eqn-leading"), {throwOnError: false});
+        });
+    </script>
 </html>

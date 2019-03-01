@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Flare Timing - Point Fractions fitting the Curve</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../">
+                        <span class="icon"><i class="fa fa-paper-plane-o"></i></span>
+                        <span class="has-text-weight-bold">Flare Timing</span>
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbar-burger" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../blog.html">Blog</a>
+                        <a class="navbar-item" href="../about.html">About</a>
+                        <a class="navbar-item" href="../contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="spacer"></div>
+            <div id="content" class="content">
+                <div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article class="tile is-child box">
+            <p class="title">Point Fractions fitting the Curve</p>
+            <p class="subtitle">March  1, 2019</p>
+            
+        </article>
+    </div>
+</div>
+<div class="content">
+    <article>
+        <h1 id="equations-for-points">Equations for Points</h1>
+<p>Graphing the equations for how points are divided up and overlaying the fractional allocation of points is a good visual check that the implementation is lining up with expectations, lining up with the equations written into the GAP rules.</p>
+<p>Doing this helped me find some bugs I had made transcribing these equations into code.</p>
+<h1 id="reach-a-line">Reach a line</h1>
+<div class="columns">
+  <div class="column is-one-third">
+    <p>The equation for the allocation of points for reach, the linear
+    distance flown irrespective of where the pilot lands or how difficult
+    the courseline, is a simple ratio.
+    </p>
+    <p id="eqn-reach"></p>
+    <p>When I was not including the pilots making it to the end of the
+    speed section the awarded fraction of reach points were not lying along
+    the expected line.
+    </p>
+  </div>
+  <div class="column is-one-third">
+    <p class="subtitle">Broken</p>
+    <p class="image">
+      <img src="../images/2019-03-01/reach-before.png">
+    </p>
+  </div>
+  <div class="column is-one-third">
+    <p class="subtitle">Fixed</p>
+    <p class="image">
+      <img src="../images/2019-03-01/reach-after.png">
+    </p>
+  </div>
+</div>
+<h1 id="time-points">Time points</h1>
+<div class="columns">
+  <div class="column is-one-third">
+    <p id="eqn-time"></p>
+    <p>I'd made an error in transcribing the above equation for allocating
+    the fraction of time points to each pilot.
+    </p>
+  </div>
+  <div class="column is-one-third">
+    <p class="subtitle">Broken</p>
+    <p class="image">
+      <img src="../images/2019-03-01/time-before.png">
+    </p>
+  </div>
+  <div class="column is-one-third">
+    <p class="subtitle">Fixed</p>
+    <p class="image">
+      <img src="../images/2019-03-01/time-after.png">
+    </p>
+  </div>
+</div>
+<h1 id="leading-points">Leading points</h1>
+<div class="columns">
+  <div class="column is-one-third">
+    <p id="eqn-leading"></p>
+    <p>I'd made an similar error with leading points.
+    </p>
+  </div>
+  <div class="column is-one-third">
+    <p class="subtitle">Broken</p>
+    <p class="image">
+      <img src="../images/2019-03-01/leading-before.png">
+    </p>
+  </div>
+  <div class="column is-one-third">
+    <p class="subtitle">Fixed</p>
+    <p class="image">
+      <img src="../images/2019-03-01/leading-after.png">
+    </p>
+  </div>
+</div>
+    </article>
+</div>
+
+            </div>
+        </div>
+    </body>
+    <script language="javascript" src="../css/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            katex.render("y = d/d_{max}", document.getElementById("eqn-reach"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(t - t_{best})^2/\\sqrt{t_{best}}})", document.getElementById("eqn-time"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(lc - lc_{min})^2/\\sqrt{lc_{min}}})", document.getElementById("eqn-leading"), {throwOnError: false});
+        });
+    </script>
+</html>

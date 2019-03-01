@@ -4,9 +4,11 @@ title: Give a Little, Zone Tolerances
 
 The Problem
 -----------
-Comp pilots fly with different varios and some error is expected when the
-instrument sounds to the pilot that the flight has touched the next turnpoint
-on course.
+Comp pilots fly with different makes and models of vario and can expect some
+error when the instrument makes its distinctive sound that the flight has
+flown into the turnpoint cylinder, tagging the zone. A glance at the screen
+can confirm this as it switches to display the distance and track to the next
+turnpoint.
 
 A Workaround
 ------------

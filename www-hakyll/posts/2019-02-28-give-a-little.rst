@@ -12,18 +12,18 @@ turnpoint.
 
 A Workaround
 ------------
-To compensate the pilots for these inaccuracies, the GAP rules have some give.
-Instruments have improved over the years and the tolerance in the rules is
-being `tightened up`_. The tolerance was set at
-half a percent of the turnpoint radius but this is reducing to a tenth of
-a percent or 5 m, whichever is the smaller.
+To compensate the pilots for these inaccuracies, the GAP rules have some give
+around turnpoints. Instruments have improved over the years and the tolerance
+in the rules is being `tightened up`_. The tolerance was set at half a
+percent of the turnpoint radius but this is reducing to a tenth of a percent
+or 5m, whichever is the smaller.
 
 Added Options
 -------------
-Aside from the tracklogs, the `extract-input` command from flare-timing is able
-to extract all the inputs it needs from the competition `*.fsdb` except for the
-Earth model used and the amount of tolerance allowed around control zones.
-These are supplied as command line options:
+Aside from the tracklogs, the :code:`extract-input` command from flare-timing
+is able to extract all the inputs it needs from the competition
+:code:`*.fsdb` except for the Earth model used and the amount of tolerance
+allowed around control zones. These are supplied as command line options:
 
 .. code-block:: console
 
@@ -64,8 +64,8 @@ inside the turnpoint cylinder zone proper.
         <article class="tile is-child notification is-warning">
           <div class="content">
             <p class="title">Zoomed in to Tag BUMF</p>
-            <p>Much the same thing happens at the next turnpoint. This pilot is
-            cutting it fine. They're tagging the cylinder with added give.
+            <p>This pilot is cutting it fine. They're tagging the cylinder
+            with added give.
             </p>
             <div class="content">
               <figure class="image">
@@ -80,9 +80,9 @@ inside the turnpoint cylinder zone proper.
       <article class="tile is-child notification is-success">
         <div class="content">
           <p class="title">Give before Zone</p>
-          <p>An exit cylinder has the give borderline drawn inside of the
-          fill. A pilot flying to the edge of an exit cylinder leaves the zone
-          with added give before they leave the zone proper.
+          <p>An exit cylinder has the give border line drawn inside of the
+          fill. A pilot flying to the edge of an exit cylinder leaves the
+          zone with added give before they leave the zone proper.
           </p>
           <figure class="image">
             <img src="/images/forbes-2018-7-start.png">
@@ -93,7 +93,7 @@ inside the turnpoint cylinder zone proper.
         <div class="content">
           <p class="title">Zoomed in to Tag WELLIN</p>
           <p>At this zoom level, we can see that the filled area is not flown
-          through but the line around the turnpoint cylinder is.
+          through but the border line around the turnpoint cylinder is.
           </p>
           <div class="content">
             <figure class="image">

@@ -20,9 +20,9 @@ correctly or not bring in all needed inputs.
 
 <div class="columns">
 <div class="column is-one-third">
-  <p>Reach is the furthest distance flown irrespective of where the pilot
-  lands or how difficult the course was. The equation for allocating
-  reach points is a simple ratio.
+  <p>Reach is the furthest distance flown irrespective of where the pilot lands
+  or how difficult the course was. The equation for allocating reach points is
+  a simple ratio of distances.
   </p>
   <p id="eqn-reach"></p>
   <p>When [not

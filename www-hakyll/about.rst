@@ -3,19 +3,19 @@ title: About
 ---
 This website **flaretiming.com** is a place for publishing the results of
 scoring competitions with a suite of command line apps, collectively called
-flare-timing.
+flare-timing_.
 
-FS_ is the official software for scoring competitions.  This involves
+FS_ is the official software for scoring competitions. This involves
 collecting inputs, scoring and producing :code:`*.html` artefacts that can be
 pushed to a web server to publish the results. For recording inputs FS has
-forms for setting up the competition parameters and registering pilots.  These
+forms for setting up the competition parameters and registering pilots. These
 are saved to the :code:`*.fsdb` file. When pilots download their track logs
 after a flight, FS copies these `*.kml` and :code:`*.igc` files to disk and
-saves the relative file location in the *.fsdb associating it with pilot and
-task. When FS does the scoring, the results are also written to the
+saves the relative file location in the :code:`*.fsdb` associating it with
+pilot and task. When FS does the scoring, the results are also written to the
 :code:`*.fsdb` file.
 
-The apps of flare-timing_ when run in sequence are a reference implementation
+The apps of flare-timing when run in sequence are a reference implementation
 of GAP. Scoring starts with taking as inputs the :code:`*.fsdb`, :code:`*.kml`
 and :code:`*.igc` saved by FS.
 

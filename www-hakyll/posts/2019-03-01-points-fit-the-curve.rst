@@ -4,13 +4,18 @@ title: Point Fractions Fitting the Curve
 
 Equations for Points
 --------------------
-Graphing the equations for how points are divided up and overlaying the
-fractional allocation of points is a good visual check that the
-implementation is lining up with expectations, lining up with the equations
-written into the GAP rules.
+For each aspect of a task flight score there is an equation for points. The
+independent variable might be something as simple as distance, time, or
+arrival order or it might be a calculated variable such as leading
+coefficient or relative difficulty. In all these equations the dependent
+variable is the fraction of points to be allocated.
 
-Doing this helped me find some bugs I had made transcribing these equations
-into code.
+Graphing these equations as lines and then overlaying a scatter plot of the
+fraction of points awarded to each pilot is a good visual check that the
+scoring was done correctly.
+
+Doing this helped me find bugs I had made not transcribing equations
+correctly or not bring in all needed inputs.
 
 Reach a line
 ------------

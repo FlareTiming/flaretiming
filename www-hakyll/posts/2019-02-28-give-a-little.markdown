@@ -26,7 +26,7 @@ These are supplied as command line options:
 > extract-input --help
 ...
 Give when crossing zones:
-    --give-fraction=NUM  How much give as a fraction, eg. 0.05% = 0.0005?
+    --give-fraction=NUM  How much give as a fraction, eg. 0.5% = 0.005?
     --give-distance=NUM  How much give in metres?
 Earth math:
   -p --pythagorus         Pythagorus' method on a plane

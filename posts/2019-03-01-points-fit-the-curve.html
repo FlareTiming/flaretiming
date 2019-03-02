@@ -42,74 +42,83 @@
 <div class="content">
     <article>
         <h1 id="equations-for-points">Equations for Points</h1>
-<p>Graphing the equations for how points are divided up and overlaying the fractional allocation of points is a good visual check that the implementation is lining up with expectations, lining up with the equations written into the GAP rules.</p>
-<p>Doing this helped me find some bugs I had made transcribing these equations into code.</p>
+<p>For each aspect of a task flight score there is an equation for points. The independent variable might be something as simple as distance, time, or arrival order or it might be a calculated variable such as leading coefficient or relative difficulty. In all these equations the dependent variable is the fraction of points to be allocated.</p>
+<p>Graphing these equations as lines and then overlaying a scatter plot of the fraction of points awarded to each pilot is a good visual check that the scoring was done correctly.</p>
+<p>Doing this helped me find bugs I had made not transcribing equations correctly or not bring in all needed inputs.</p>
 <h1 id="reach-a-line">Reach a line</h1>
 <div class="columns">
-  <div class="column is-one-third">
-    <p>The equation for the allocation of points for reach, the linear
-    distance flown irrespective of where the pilot lands or how difficult
-    the courseline, is a simple ratio.
-    </p>
-    <p id="eqn-reach"></p>
-    <p>When I was not including the pilots making it to the end of the
-    speed section the awarded fraction of reach points were not lying along
-    the expected line.
-    </p>
-  </div>
-  <div class="column is-one-third">
-    <p class="subtitle">Broken</p>
-    <p class="image">
-      <img src="../images/2019-03-01/reach-before.png">
-    </p>
-  </div>
-  <div class="column is-one-third">
-    <p class="subtitle">Fixed</p>
-    <p class="image">
-      <img src="../images/2019-03-01/reach-after.png">
-    </p>
-  </div>
+<div class="column is-one-third">
+<p>
+Reach is the furthest distance flown irrespective of where the pilot lands or how difficult the course was. The equation for allocating reach points is a simple ratio of distances.
+</p>
+<p id="eqn-reach">
+</p>
+<p>
+When <a href="https://github.com/BlockScope/flare-timing/commit/310171b9dcb3fb736c5db7827b5571725d23a80f">not including</a> the pilots making it to the end of the speed section, bringing only the distances of pilots that had landed out as inputs to the equation, the scatter plot of awarded fractions for reach points were not lying along the expected line.
+</p>
+</div><div class="column is-one-third">
+<p class="subtitle">
+Broken
+</p>
+<p class="image">
+<img src="../images/2019-03-01/reach-before.png">
+</p>
+</div><div class="column is-one-third">
+<p class="subtitle">
+Fixed
+</p>
+<p class="image">
+<img src="../images/2019-03-01/reach-after.png">
+</p>
+</div>
 </div>
 <h1 id="time-points">Time points</h1>
 <div class="columns">
-  <div class="column is-one-third">
-    <p id="eqn-time"></p>
-    <p>I'd made an error in transcribing the above equation for allocating
-    the fraction of time points to each pilot.
-    </p>
-  </div>
-  <div class="column is-one-third">
-    <p class="subtitle">Broken</p>
-    <p class="image">
-      <img src="../images/2019-03-01/time-before.png">
-    </p>
-  </div>
-  <div class="column is-one-third">
-    <p class="subtitle">Fixed</p>
-    <p class="image">
-      <img src="../images/2019-03-01/time-after.png">
-    </p>
-  </div>
+<div class="column is-one-third">
+<p id="eqn-time">
+</p>
+<p>
+I’d made an <a href="https://github.com/BlockScope/flare-timing/commit/302433eac39966e0785d5fc638b4fbdcfdf155b1">error</a> in transcribing the above equation for allocating the fraction of time points to each pilot.
+</p>
+</div><div class="column is-one-third">
+<p class="subtitle">
+Broken
+</p>
+<p class="image">
+<img src="../images/2019-03-01/time-before.png">
+</p>
+</div><div class="column is-one-third">
+<p class="subtitle">
+Fixed
+</p>
+<p class="image">
+<img src="../images/2019-03-01/time-after.png">
+</p>
+</div>
 </div>
 <h1 id="leading-points">Leading points</h1>
 <div class="columns">
-  <div class="column is-one-third">
-    <p id="eqn-leading"></p>
-    <p>I'd made an similar error with leading points.
-    </p>
-  </div>
-  <div class="column is-one-third">
-    <p class="subtitle">Broken</p>
-    <p class="image">
-      <img src="../images/2019-03-01/leading-before.png">
-    </p>
-  </div>
-  <div class="column is-one-third">
-    <p class="subtitle">Fixed</p>
-    <p class="image">
-      <img src="../images/2019-03-01/leading-after.png">
-    </p>
-  </div>
+<div class="column is-one-third">
+<p id="eqn-leading">
+</p>
+<p>
+I’d made an similar <a href="https://github.com/BlockScope/flare-timing/commit/293296baf019816b0e9131c0c069f13282220c83">error</a> with leading points.
+</p>
+</div><div class="column is-one-third">
+<p class="subtitle">
+Broken
+</p>
+<p class="image">
+<img src="../images/2019-03-01/leading-before.png">
+</p>
+</div><div class="column is-one-third">
+<p class="subtitle">
+Fixed
+</p>
+<p class="image">
+<img src="../images/2019-03-01/leading-after.png">
+</p>
+</div>
 </div>
     </article>
 </div>

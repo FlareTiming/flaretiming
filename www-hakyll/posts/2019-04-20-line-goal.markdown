@@ -1,0 +1,34 @@
+---
+title: Optimal Route to a Line Goal
+---
+
+# Finding the Optimal Route
+The method I use for finding an optimal route is very general and can be used
+with any Earth model with Earth as a sphere, an ellipsoid or a plane. Initially
+I'd got this working by treating every control zone on a task as if it were
+a circle on the Earth's surface.
+
+I sample a few evenly spaced points on the border of each zone and then build
+a network within and between the points of each zone.  For the cost between
+nodes in this graph I use the distance on the current Earth model, using
+Haversines formula for a sphere, Vincenty's formula for an ellisoid or
+Pythagorus' formula for a projection. I set a [shortest path
+algorithm](https://hackage.haskell.org/package/fgl-5.7.0.1/docs/Data-Graph-Inductive-Query-SP.html)
+to task on this graph and out spits the optimal route.
+
+# Sampling a Goal Circle
+
+For a circle I take a first sample around the whole arc of the circumference.
+With each iteration I reduce by half the sweep of the arc and now centered
+around the point picked as the optimal point of entry into each zone at
+completion of the previous iteration.
+
+# Sampling a Goal Line
+
+To sample points around a line I need to also consider the previous zone as
+a line by itself does not specify its direction and instead the line's
+direction is normal to the reverse azimuth to the previous zone's center point.
+I use the arc sampling method as for sampling a circle but on the side of the
+line facing the previous zone, I project the sample from the arc down to the
+line. On the first iteration I make sure to also add the endpoints of the line
+too.

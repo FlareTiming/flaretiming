@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Flare Timing - Optimal Route to a Line Goal</title>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous" />
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="../">
+                        <span class="icon"><i class="fa fa-paper-plane-o"></i></span>
+                        <span class="has-text-weight-bold">Flare Timing</span>
+                    </a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-burger">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div id="navbar-burger" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="../blog.html">Blog</a>
+                        <a class="navbar-item" href="../about.html">About</a>
+                        <a class="navbar-item" href="../contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="spacer"></div>
+            <div id="content" class="content">
+                <div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article class="tile is-child box">
+            <p class="title">Optimal Route to a Line Goal</p>
+            <p class="subtitle">April 20, 2019</p>
+            
+        </article>
+    </div>
+</div>
+<div class="content">
+    <article>
+        <h1 id="finding-the-optimal-route">Finding the Optimal Route</h1>
+<p>The method I use for finding an optimal route is very general and can be used with any Earth model with Earth as a sphere, an ellipsoid or a plane. Initially I’d got this working by treating every control zone on a task as if it were a circle on the Earth’s surface.</p>
+<p>I sample a few evenly spaced points on the border of each zone and then build a network within and between the points of each zone. For the cost between nodes in this graph I use the distance on the current Earth model, using Haversines formula for a sphere, Vincenty’s formula for an ellisoid or Pythagorus’ formula for a projection. I set a <a href="https://hackage.haskell.org/package/fgl-5.7.0.1/docs/Data-Graph-Inductive-Query-SP.html">shortest path algorithm</a> to task on this graph and out spits the optimal route.</p>
+<h1 id="sampling-a-goal-circle">Sampling a Goal Circle</h1>
+<p>For a circle I take a first sample around the whole arc of the circumference. With each iteration I reduce by half the sweep of the arc and now centered around the point picked as the optimal point of entry into each zone at completion of the previous iteration.</p>
+<h1 id="sampling-a-goal-line">Sampling a Goal Line</h1>
+<p>To sample points around a line I need to also consider the previous zone as a line by itself does not specify its direction and instead the line’s direction is normal to the reverse azimuth to the previous zone’s center point. I use the arc sampling method as for sampling a circle but on the side of the line facing the previous zone, I project the sample from the arc down to the line. On the first iteration I make sure to also add the endpoints of the line too.</p>
+    </article>
+</div>
+
+            </div>
+        </div>
+    </body>
+    <script language="javascript" src="../css/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            katex.render("y = d/d_{max}", document.getElementById("eqn-reach"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(t - t_{best})^2/\\sqrt{t_{best}}})", document.getElementById("eqn-time"), {throwOnError: false});
+            katex.render("y = max(0, 1 - \\sqrt[3]{(lc - lc_{min})^2/\\sqrt{lc_{min}}})", document.getElementById("eqn-leading"), {throwOnError: false});
+        });
+    </script>
+</html>

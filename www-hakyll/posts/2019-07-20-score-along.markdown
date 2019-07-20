@@ -11,7 +11,15 @@ a clean slate with flare-timing.
 As flare-timing now covers most situations and applies the rules, rightly or
 wrongly, it is time to compare it with FS. I found scanning tables, plots or
 maps to be quicker than picking through files looking for comparative
-differences. With tables I can compare actual with expected values in adjacent
+differences.
+
+<div class="column is-6">
+  <p class="image">
+    <img src="/images/2019-07-20/overview.png">
+  </p>
+</div>
+
+With tables I can compare actual with expected values in adjacent
 columns and then add a third column for the difference between the two.
 I don't particularly care that the colors are garish or that there are too many
 digits in a cluttered table or that by contrast all FS results are displayed in
@@ -20,6 +28,12 @@ A difference of +0.0 doesn't tell me as much as a difference of +0.002. With
 flare-timing, the web app, I have at hand a quick visual check that covers most
 aspects of the breakdown of scoring with tables and plots for reach, effort,
 leading, time and arrival.
+
+<div class="column is-6">
+  <p class="image">
+    <img src="/images/2019-07-20/split.png">
+  </p>
+</div>
 
 I'm now at the point where using FS or seeing its implementation is not
 a diversion. Infact I think I need to know more how to use it. Already I have

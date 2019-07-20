@@ -100,7 +100,14 @@ being to used to score the worlds champs in Italy and a version that includes
 some of my contributed fixes. I wish I could link to these issues and fixes but
 unfortunately both the issues and code are hosted in private on github. I hope
 these will be made public by [FAI-CIVL](https://github.com/FAI-CIVL) some time
-soon to acknowledge the work of volunteer contributors.
+soon to acknowledge the work of volunteer contributors. Here's a peek at one of
+the bugs I found and fixed.
+
+<div class="column is-6">
+  <p class="image">
+    <img src="/images/2019-07-20/issue-79.png">
+  </p>
+</div>
 
 I fire FS up and create a new competition, selecting GAP2018 as the scoring
 formula. From the published results I can check that I have the same settings.

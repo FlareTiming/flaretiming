@@ -15,7 +15,7 @@ differences.
 
 <div class="column is-6">
   <p class="image">
-    <img src="/images/2019-07-20/overview.png">
+    <img src="/images/2019-07-20/overview-table.png">
   </p>
 </div>
 
@@ -31,7 +31,17 @@ leading, time and arrival.
 
 <div class="column is-6">
   <p class="image">
-    <img src="/images/2019-07-20/split.png">
+    <img src="/images/2019-07-20/split-table.png">
+  </p>
+</div>
+
+The GAP rules include graphs alongside explanations and I've added these to
+flare-timing too. They help to see what is going on. I particularly like the
+visualisation of varying difficulty along the course line of the effort plot.
+
+<div class="column is-6">
+  <p class="image">
+    <img src="/images/2019-07-20/effort-plot.png">
   </p>
 </div>
 

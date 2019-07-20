@@ -2,11 +2,11 @@
 title: Score Along at Home
 ---
 
-I've been working on reproducing the scores that FS gives pilots but trying to
-ignore that app as much as possible, both as a developer with access to its
-source code and as a user. I didn't want its influence to steer me in my
-interpretation of the GAP rules when implementing those rules again from
-a clean slate with flare-timing.
+I've been working on reproducing the scores that [FS](http://fs.fai.org/) gives
+pilots but trying to ignore that app as much as possible, both as a developer
+with access to its source code and as a user. I didn't want its influence to
+steer me in my interpretation of the GAP rules when implementing those rules
+again from a clean slate with flare-timing.
 
 As flare-timing now covers most situations and applies the rules, rightly or
 wrongly, it is time to compare it with FS. I found scanning tables, plots or

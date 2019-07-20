@@ -42,7 +42,24 @@
 <div class="content">
     <article>
         <p>I’ve been working on reproducing the scores that FS gives pilots but trying to ignore that app as much as possible, both as a developer with access to its source code and as a user. I didn’t want its influence to steer me in my interpretation of the GAP rules when implementing those rules again from a clean slate with flare-timing.</p>
-<p>As flare-timing now covers most situations and applies the rules, rightly or wrongly, it is time to compare it with FS. I found scanning tables, plots or maps to be quicker than picking through files looking for comparative differences. With tables I can compare actual with expected values in adjacent columns and then add a third column for the difference between the two. I don’t particularly care that the colors are garish or that there are too many digits in a cluttered table or that by contrast all FS results are displayed in black. I want to be able to find differences as quickly as possible. A difference of +0.0 doesn’t tell me as much as a difference of +0.002. With flare-timing, the web app, I have at hand a quick visual check that covers most aspects of the breakdown of scoring with tables and plots for reach, effort, leading, time and arrival.</p>
+<p>As flare-timing now covers most situations and applies the rules, rightly or wrongly, it is time to compare it with FS. I found scanning tables, plots or maps to be quicker than picking through files looking for comparative differences.</p>
+<div class="column is-6">
+<p class="image">
+<img src="../images/2019-07-20/overview-table.png">
+</p>
+</div>
+<p>With tables I can compare actual with expected values in adjacent columns and then add a third column for the difference between the two. I don’t particularly care that the colors are garish or that there are too many digits in a cluttered table or that by contrast all FS results are displayed in black. I want to be able to find differences as quickly as possible. A difference of +0.0 doesn’t tell me as much as a difference of +0.002. With flare-timing, the web app, I have at hand a quick visual check that covers most aspects of the breakdown of scoring with tables and plots for reach, effort, leading, time and arrival.</p>
+<div class="column is-6">
+<p class="image">
+<img src="../images/2019-07-20/split-table.png">
+</p>
+</div>
+<p>The GAP rules include graphs alongside explanations and I’ve added these to flare-timing too. They help to see what is going on. I particularly like the visualisation of varying difficulty along the course line of the effort plot.</p>
+<div class="column is-6">
+<p class="image">
+<img src="../images/2019-07-20/effort-plot.png">
+</p>
+</div>
 <p>I’m now at the point where using FS or seeing its implementation is not a diversion. Infact I think I need to know more how to use it. Already I have found and fixed some bugs in FS that I found because I was comparing its results with those of flare-timing or because I had interpreted the rules in a different way than the developers of FS had.</p>
 <p>As the hang gliding world championships are on in Italy at the moment and the task scores along with settings and <code>*.igc</code> track log files are published daily on airtribune, I thought I would have a go at following along at home. Could I reproduce the published scores using only the published track logs and settings? There is a chance that some needed setting is not published but I won’t find that out unless I try.</p>
 <p>First off I’ll need the list of pilots. To get that I can open a task result table in a web browser, select copy the score table and paste what is in the clipboard into a spreadsheet. Deleting all columns but for pilot number and name, I have the list I need except for pilots marked absent from the task. There’s few of those, just four pilots for the first task, so I can add those later using FS and its participants’ list. I save the list I have as <code>*.csv</code>.</p>

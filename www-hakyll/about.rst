@@ -37,12 +37,12 @@ scoring is being done correctly, in accordance with the rules of GAP.
 
 .. _FS: http://fs.fai.org
 .. _flare-timing: https://github.com/BlockScope/flare-timing
-.. _extract-input: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/extract-input
-.. _task-length: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/task-length
-.. _cross-zone: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/cross-zone
-.. _tag-zone: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/tag-zone
-.. _align-time: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/align-time
-.. _discard-further: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/discard-further
-.. _mask-track: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/mask-track
-.. _land-out: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/land-out
-.. _gap-point: https://github.com/BlockScope/flare-timing/blob/master/flare-timing/prod-apps/gap-point
+.. _extract-input: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/extract-input
+.. _task-length: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/task-length
+.. _cross-zone: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/cross-zone
+.. _tag-zone: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/tag-zone
+.. _align-time: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/align-time
+.. _discard-further: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/discard-further
+.. _mask-track: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/mask-track
+.. _land-out: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/land-out
+.. _gap-point: https://github.com/BlockScope/flare-timing/blob/master/lang-haskell/flare-timing/prod-apps/gap-point

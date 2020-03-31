@@ -21,7 +21,7 @@ in  let exts = ./default-extensions.dhall
           , executables =
               { site =
                   { dependencies =
-                      [ "base", "hakyll", "pandoc", "blaze-html" ]
+                  [ "base", "blaze-html", "filepath", "hakyll", "pandoc" ]
                   , source-dirs =
                       "www-hakyll"
                   , main =

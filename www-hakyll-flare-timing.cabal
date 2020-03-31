@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.dhall by hpack version 0.31.1.
+-- This file has been generated from package.dhall by hpack version 0.31.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 2cfd1f8498b493cf1f1f501d9d0cdaf5dcb6bf86b8835ec903f58080b8d475b1
+-- hash: ff820f9f70a162d92ef8088fb90a010260f63fa066c86ee837f68810d8ce398e
 
 name:           www-hakyll-flare-timing
 version:        0.2.0
@@ -22,7 +22,6 @@ tested-with:    GHC == 8.2.2
 build-type:     Simple
 extra-source-files:
     package.dhall
-    package.yaml
     changelog.md
     README.md
 
@@ -41,6 +40,7 @@ executable site
   build-depends:
       base
     , blaze-html
+    , filepath
     , hakyll
     , pandoc
   default-language: Haskell2010
